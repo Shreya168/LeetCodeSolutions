@@ -1,0 +1,15 @@
+Intuition
+To find the missing number in the array, we can utilize the fact that all numbers from 0 to n are expected to be present in the array, where n is the length of the array. Thus, we can calculate the sum of the expected sequence of numbers using the formula for the sum of the first n natural numbers. By subtracting the actual sum of the numbers in the array from this expected sum, we can determine the missing number.
+
+Approach
+Calculate the expected sum of the sequence of numbers from 0 to n using the formula 𝑛×(𝑛+1)/2.
+Iterate through the given array and calculate the actual sum of the numbers present in the array.
+Subtract the actual sum from the expected sum to find the missing number.
+Return the missing number.
+
+Complexity
+Time complexity:
+O(n)
+
+Space complexity:
+O(1)
