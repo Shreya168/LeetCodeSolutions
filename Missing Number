@@ -13,3 +13,15 @@ O(n)
 
 Space complexity:
 O(1)
+
+class Solution {
+    public int missingNumber(int[] nums) {
+        int expectedsum=(nums.length*(nums.length+1))/2;
+        int cursum=0;
+        for(int num:nums)
+        {
+            cursum+=num;
+        }
+        return expectedsum-cursum;
+    }
+}
