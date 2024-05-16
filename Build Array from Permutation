@@ -1,12 +1,11 @@
-# Complexity
+Complexity
 - Time complexity:
 O(n), where n is the length of the input array nums. 
 
 - Space complexity:
 O(n), where n is the length of the input array nums. 
 
-# Code
-```
+Code
 class Solution {
     public int[] buildArray(int[] nums) {
         int[] ans=new int[nums.length];
