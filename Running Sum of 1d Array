@@ -1,0 +1,21 @@
+Complexity
+Time complexity:
+O(n)
+
+Space complexity:
+O(n)
+
+Code
+class Solution {
+    public int[] runningSum(int[] nums) {
+        int[] runningSum=new int[nums.length];
+        int curSum=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            curSum+=nums[i];
+            runningSum[i]=curSum;
+        }
+        return runningSum;
+        
+    }
+}
