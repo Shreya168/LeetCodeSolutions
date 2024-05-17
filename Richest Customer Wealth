@@ -1,0 +1,33 @@
+Complexity
+Time complexity:
+The time complexity of the maximumWealth method can be analyzed by considering the nested loops:
+---> The outer loop iterates through each customer in the accounts array. If there are m customers, this loop runs m times.
+---> The inner loop iterates through each bank account of the current customer. If each customer has n bank accounts, this loop runs n times for each customer.
+Since the inner loop runs n times for each of the m customers, the total number of iterations is m * n.
+
+Therefore, the time complexity of the method is: O(m×n)
+
+Space complexity:
+The space complexity of the maximumWealth method can be analyzed by considering the additional space used by the algorithm:
+---> The variable maxsum is a single integer, which uses constant space: O(1).
+---> The variable sum is also a single integer, reinitialized for each customer but still uses constant space: 𝑂(1).
+---> The method does not use any additional space that grows with the input size; it only uses a fixed amount of extra space.
+
+Therefore, the space complexity is: 𝑂(1)
+
+Code
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+        int maxWealth=0;
+        for(int i=0;i<accounts.length;i++)
+        {
+            int customerWealth=0;
+            for(int j=0;j<accounts[i].length;j++)
+            {
+                customerWealth+=accounts[i][j];
+            }
+            maxWealth=Math.max(customerWealth,maxWealth);
+        } 
+        return maxWealth;  
+    }
+}
