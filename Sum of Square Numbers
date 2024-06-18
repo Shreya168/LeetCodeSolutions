@@ -1,3 +1,24 @@
+Intuition
+To determine if a given number c can be expressed as the sum of two squares, we can leverage the fact that the sum of two squares that equals c must lie between 0 and sqrt(c) for each of the squares. We can use a two-pointer technique to find these squares efficiently.
+
+Approach
+1. Initialize two pointers left to 0 and right to sqrt(c).
+2. Use loop to check the result of the squares of these pointers.
+3. If the result is equal to c , then return true.
+4. If the result is greater than c , decrement right pointer to decrease the sum.
+5. If the result is lesser than c , increment left pointer to increase the sum.
+6. Continue this until left exceeds right.
+7. If no such pair is found, return false.
+
+Complexity
+Time complexity:
+-->The time complexity is O(sqrt(c) because in the worst case, both pointers will traverse from 0 to sqrt(c).
+
+Space complexity:
+-->The space complexity is O(1) since we are using only a constant amount of extra space.
+
+
+
 class Solution {
     public boolean judgeSquareSum(int c) {
         long left=0;
